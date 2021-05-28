@@ -16,3 +16,18 @@ if choice == 'dog':
 
     # Prints the statement, using the dog's name and dog's human age:
     print('Cool. Your dog, ' + dogName + ', is ' + dogHumanAge + ' in human years.')
+
+elif choice == 'human':
+    print("Alright, we're going to calculate your human age in months. Let's go!\n")
+    # sleep = 1   (How do you write a time delay in a Python program?)
+    humanName = input("What is your name?\n")
+    humanAge = input('Got it. How old are you, ' + humanName + '?\n')
+
+    # Here, we convert the human's age from a string (humanAge) to a float (humanNewAge)
+    # and back to a string (humanMonthAge) that can be read in the print statement:
+    humanFloatAge = float(humanAge)
+    humanNewAge = (humanFloatAge * 12)
+    humanMonthAge = str(humanNewAge)
+
+    # Prints the statement, using the dog's name and dog's human age:
+    print('Cool. You, ' + humanName + ', are ' + humanMonthAge + ' months old.')
