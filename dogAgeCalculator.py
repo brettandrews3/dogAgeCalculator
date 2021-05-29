@@ -31,3 +31,6 @@ elif choice == 'human':
 
     # Prints the statement, using the dog's name and dog's human age:
     print('Cool. You, ' + humanName + ', are ' + humanMonthAge + ' months old.')
+
+else:
+    print("That input won't work. Please enter 'human' or 'dog'.")
