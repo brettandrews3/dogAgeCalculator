@@ -5,32 +5,30 @@ choice = input("Enter 'human' or 'dog':\n")
 if choice == 'dog':
     print("Alright, we\'re going to calculate your dog\'s age in dog years. Let's go!\n")
     # sleep = 1   (How do you write a time delay in a Python program?)
-    dogName = input("What is your dog's name?\n")
-    dogDogAge = input('Got it. How old is ' + dogName + '?\n')
+    dog_name = input("What is your dog's name?\n")
+    dog_age = input('Got it. How old is ' + dog_name + '?\n')
 
-    # Here, we convert the dog's age from a string (dogIntAge) to a float (dogNewAge)
-    # and back to a string (dogHumanAge) that can be read in the print statement:
-    dogIntAge = float(dogDogAge)
-    dogNewAge = (dogIntAge * 7)
-    dogHumanAge = str(dogNewAge)
+    # This version decreases the number of variables involved in converting dog_age input()
+    # to an int for multiplication and back to string:
+    human_age = int(dog_age) * 7
+    human_age = str(human_age)
 
     # Prints the statement, using the dog's name and dog's human age:
-    print('Cool. Your dog, ' + dogName + ', is ' + dogHumanAge + ' in human years.')
+    print('Cool. Your dog, ' + dog_name + ', is ' + human_age + ' in human years.')
 
 elif choice == 'human':
     print("Alright, we're going to calculate your human age in months. Let's go!\n")
     # sleep = 1   (How do you write a time delay in a Python program?)
-    humanName = input("What is your name?\n")
-    humanAge = input('Got it. How old are you, ' + humanName + '?\n')
+    human_name = input("What is your name?\n")
+    human_age = input('Got it. How old are you, ' + human_name + '?\n')
 
     # Here, we convert the human's age from a string (humanAge) to a float (humanNewAge)
     # and back to a string (humanMonthAge) that can be read in the print statement:
-    humanFloatAge = float(humanAge)
-    humanNewAge = (humanFloatAge * 12)
-    humanMonthAge = str(humanNewAge)
+    human_month_age = int(human_age) * 12
+    human_month_age = str(human_month_age)
 
     # Prints the statement, using the dog's name and dog's human age:
-    print('Cool. You, ' + humanName + ', are ' + humanMonthAge + ' months old.')
+    print('Cool. You, ' + human_name + ', are ' + human_month_age + ' months old.')
 
 else:
     print("That input won't work. Please enter 'human' or 'dog'.")
